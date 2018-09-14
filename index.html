@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>** SCPF **</title>
+    <meta charset="UTF-8">
+    <link href="libraries/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="libraries/font-awesome/css/font-awesome.min.css">
+    <script>
+
+        function login() {
+            var username = document.getElementById("username");
+            var password = document.getElementById("password");
+//            var messageDanger = document.getElementById("messageDanger");
+
+            if (username.value == 'admin' && password.value == 'admin') {
+                document.getElementById("form-login").submit();
+            } else {
+//                messageDanger.display = 'block';
+                $("#messageDanger").show();
+                setTimeout(function(){
+//                    messageDanger.display = 'none';
+                    $("#messageDanger").hide();
+                    username.value = '';
+                    password.value = '';
+                }, 3000)
+            }
+
+        }
+
+    </script>
+</head>
+<body>
+
+<div class="container">
+    <div id="login-row" class="row justify-content-center align-items-center">
+        <div id="login-column" class="col-md-6">
+            <div class="box">
+                <div class="shape1"></div>
+                <div class="shape2"></div>
+                <div class="shape3"></div>
+                <div class="shape4"></div>
+                <div class="shape5"></div>
+                <div class="shape6"></div>
+                <div class="shape7"></div>
+                <div class="float">
+                    <form id="form-login" class="form" action="principal.html" method="post">
+                        <div class="form-group">
+                            <label for="username" class="text-white">Usúario:</label><br>
+                            <input type="text" name="username" id="username" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="text-white">Senha:</label><br>
+                            <input type="password" name="password" id="password" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <button type="button" class="btn btn-info btn-md" onclick="login() ">
+                                <i class="fa fa-sign-in" aria-hidden="true"></i> Entrar no Site
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div class="row ">
+        <div id="messageDanger" class="alert alert-danger col-md-6 offset-md-3" role="alert" style="text-align: center; display: none">
+            <i class="fa fa-info-circle" aria-hidden="true"></i> USUÁRIO OU SENHA INCORRETOS!
+        </div>
+    </div>
+
+</div>
+<!--<script src="libraries/bootstrap/js/bootstrap.min.js"></script>-->
+<script src="libraries/jquery/jquery-3.2.1.min.js"></script>
+</body>
+</html>

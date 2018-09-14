@@ -1,0 +1,11 @@
+.asterisco-obrigatorio {
+    color: red;
+    font-weight: bold;
+}
+
+.cursor {
+    cursor: pointer;
+}
+.bold{
+    font-weight: bold;
+}

@@ -1,0 +1,84 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>** SCPF **</title>
+
+    <link rel="stylesheet" href="libraries/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="libraries/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/cadastrarPessoa.css">
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+    <a class="navbar-brand cursor" href="principal.html"> <i class="fa fa-home" aria-hidden="true"></i> Página Inícial</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link cursor" href="cadastrarPessoa.html"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>  Cadastrar Pessoa </a>
+            </li>
+            <li class="nav-item active">
+                <!--<a class="nav-link disabled" href="#">Disabled</a>-->
+                <a class="nav-link cursor" data-toggle="modal" data-target="#logoutModal" style="cursor: pointer;">
+                    <i class="fa fa-fw fa-sign-out "></i>Sair do Sistema</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+
+<main role="main" class="container">
+    <div class="jumbotron">
+        <h1>SCPF - Sistema de Cadastramento de Pessoa Física</h1>
+        <p class="lead">Insira corretamente os dados e clique em Salvar Registro.</p>
+        <a class="btn btn-lg btn-success" href="cadastrarPessoa.html" role="button"> <i class="fa fa-plus" aria-hidden="true"></i> CRIAR UM NOVO REGISTRO DE PESSOA FÍSICA »</a>
+    </div>
+</main>
+
+
+
+<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel"
+     aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">ATENÇÃO!</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">x</span>
+                </button>
+            </div>
+            <div class="modal-body">DESEJA REALMENTE ENCERRAR A SESSÃO?</div>
+            <div class="modal-footer">
+                <button class="btn btn-danger btn-sm" type="button" data-dismiss="modal"><i
+                        class="fa fa-fw fa-close"></i>Cancelar
+                </button>
+                <a class="btn btn-success btn-sm" href="index.html"><i class="fa fa-fw fa-sign-out"></i>Encerrar</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- Adicionando JQuery -->
+<script src="libraries/jquery/jquery-3.2.1.min.js"></script>
+
+<!-- Adicionando Javascript Bootstrap-->
+<script src="libraries/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- Adicionando Javascript -->
+<script src="libraries/jquery-mask/dist/jquery.mask.min.js"></script>
+<script src="js/ValidadeForm.js"></script>
+<script src="js/index.js"></script>
+
+<script>
+    var Cep = new Cep();
+</script>
+</body>
+</html>
